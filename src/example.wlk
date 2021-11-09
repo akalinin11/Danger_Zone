@@ -35,6 +35,7 @@ class Empleados{
 	method aprenderHabilidad(hab){
 			habilidades.add(hab)
 }
+}
 
 class Jefe inherits Empleados{
 	const subordinados = []
@@ -47,7 +48,7 @@ class Jefe inherits Empleados{
 	
 }
 class Mision{
-	var habilidadesRequeridas = #{}
+	var property habilidadesRequeridas = #{}
 	const peligrosidad = 0
 	
 	
@@ -77,14 +78,14 @@ class Mision{
 		
 }
 
-
+// PUESTOS
 
 object puestoEspia {
 	
 		method saludCritica() = 15
 		
 		method completarMision(mision,empleado){
-			
+				mision.enseniarHabilidades(mision, empleado)
 		}
 
 }
@@ -93,11 +94,7 @@ class PuestoOficinista {
 	 var estrellas = 0
 		
 	 method saludCritica() = 40 - 5 * estrellas	
-	
-	 method sobrevivirMision(){
-		estrellas += 1
-		}
-		
+
 	method completarMision(mision,empleado){
 			estrellas+=1
 			if(estrellas == 3){
@@ -106,4 +103,3 @@ class PuestoOficinista {
 		}
 		
 		}
-}
