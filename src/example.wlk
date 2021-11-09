@@ -91,3 +91,17 @@ object puestoEspia {
 
 }
 
+class PuestoOficinista {
+	 var estrellas = 0
+		
+	 method saludCritica() = 40 - 5 * estrellas	
+
+	method completarMision(mision,empleado){
+			estrellas+=1
+			if(estrellas == 3){
+				empleado.puesto(puestoEspia)
+			}
+		}
+		
+		}
+//PRUEBA DE CIERRE
